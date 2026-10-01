@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class persona {
+/*class persona {
 private:
 		string nom;
 		int edad;
@@ -44,7 +44,7 @@ int ej1() {
 
 
 
-}
+}*/
 
 
 
@@ -54,7 +54,7 @@ private:
 	double ancho;
 	double alto;
 public:
-	Rectangulo(double am, double al) {
+	rectangulo(double am, double al) {
 		ancho = am;
 		alto = al;
 
@@ -64,25 +64,26 @@ public:
 		cout << "la anchura es" << ancho << endl;
 	}
 	double calculo_area() {
-		return alcho * alto;
+		return ancho * alto;
 
 	}
 	double calculo_perimetro() {
-		return (ancho * 2) + (alto * 2)
-	};
+		return (ancho * 2) + (alto * 2);
+	}
+};
 
-	int main() {
-		double ancho;
-		double alto;
-		cout << "introduce la anchhura" << endl;
-		cin >> ancho;
+int main() {
+	double ancho;
+	double alto;
+	cout << "introduce la anchhura" << endl;
+	cin >> ancho;
 
-		cout << "introduce la altura" << endl;
-		cin >> alto;
-		rectangulo forma (ancho, alto);
-		cout << "los datos son " << endl;
-		forma.Mostrar_parametros();
+	cout << "introduce la altura" << endl;
+	cin >> alto;
+	rectangulo figura(ancho, alto);
+	cout << "los datos son " << endl;
+	figura.Mostrar_parametros();
 
-		cout << " el area del rectangulo es: " << endl; 
-			cout << " el perimetro del rectangulo es: " << endl;
-
+	cout << " el area del rectangulo es: " << figura.calculo_area() << endl;
+	cout << " el perimetro del rectangulo es: " << figura.calculo_perimetro() << endl;
+}
